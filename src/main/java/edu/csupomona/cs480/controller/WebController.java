@@ -131,5 +131,12 @@ public class WebController {
 		modelAndView.addObject("users", listAllUsers());
 		return modelAndView;
 	}
+	/*
+	 * New mapping made for Assignment #3
+	 */
+	@RequestMapping(value = "/cs480/adam", method = RequestMethod.GET)
+	String adamsPage() {
+		return "This page was made by Adam";
+	}
 
 }
