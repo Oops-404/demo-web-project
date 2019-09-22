@@ -138,5 +138,10 @@ public class WebController {
 	String adamsPage() {
 		return "This page was made by Adam";
 	}
+	URL url = new URL("http://cs480-projects.github.io/teams-fall2019/Oops%20404/index.html");
+	HttpURLConnection con = (HttpURLConnection) url.openConnection();
+	con.setRequestMethod("GET");
+		return "This page was made by Nick";
+	}
 
 }
