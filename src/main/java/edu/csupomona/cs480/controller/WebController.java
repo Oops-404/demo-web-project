@@ -143,8 +143,9 @@ public class WebController {
 		return "Nick Soultanian";
 	}
 	@RequestMapping(value = "/cs480/annie", method = RequestMethod.GET)
-	String anniesPage() {
-		return "Support Annie's photography at flickr.com/people/anniewuphotos/";
+	public ModelAndView anniesPage() {
+		String anniesFlickr = "https://www.flickr.com/people/anniewuphotos/";
+	    return new ModelAndView("redirect:" + anniesFlickr);
 	}
 
 }
