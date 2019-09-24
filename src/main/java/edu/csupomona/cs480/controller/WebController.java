@@ -144,7 +144,7 @@ public class WebController {
 	}
 	@RequestMapping(value = "/cs480/annie", method = RequestMethod.GET)
 	String anniesPage() {
-		return "This page was made by Annie";
+		return "Support Annie's photography at flickr.com/people/anniewuphotos/";
 	}
 
 }
