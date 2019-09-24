@@ -148,7 +148,7 @@ public class WebController {
 	    return new ModelAndView("redirect:" + anniesFlickr);
 	}
 	@RequestMapping(value = "/cs480/diane", method = RequestMethod.GET)
-	String dianePage() {
+	String dianesPage() {
 	    return "Diane's testing page";
 	}
 
