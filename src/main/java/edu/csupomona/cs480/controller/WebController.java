@@ -147,5 +147,10 @@ public class WebController {
 		String anniesFlickr = "https://www.flickr.com/people/anniewuphotos/";
 	    return new ModelAndView("redirect:" + anniesFlickr);
 	}
+	@RequestMapping(value = "/cs480/diane", method = RequestMethod.GET)
+	String dianePage() {
+	    return "Diane's testing page";
+	}
+
 
 }
