@@ -140,7 +140,7 @@ public class WebController {
 	}
 	@RequestMapping(value = "/cs480/nick", method = RequestMethod.GET)
 	String nicksPage() {
-		return "This page was made by Nick";
+		return "Nick Soultanian";
 	}
 	@RequestMapping(value = "/cs480/annie", method = RequestMethod.GET)
 	String anniesPage() {
