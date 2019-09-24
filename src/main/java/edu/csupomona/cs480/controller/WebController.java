@@ -138,5 +138,9 @@ public class WebController {
 	String adamsPage() {
 		return "This page was made by Adam";
 	}
+	@RequestMapping(value = "/cs480/nick", method = RequestMethod.GET)
+	String nicksPage() {
+		return "This page was made by Nick";
+	}
 
 }
