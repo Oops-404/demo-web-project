@@ -1,6 +1,12 @@
 package edu.csupomona.cs480.controller;
 
+import java.io.IOException;
 import java.util.List;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -154,6 +160,33 @@ public class WebController {
 	@RequestMapping(value = "/cs480/diane", method = RequestMethod.GET)
 	String dianesPage() {
 	    return "Diane's testing page";
+	}
+	
+	/*
+	 * New Mappings for Assignment #4
+	 */
+	@RequestMapping(value = "/cs480/youtubeLinks", method = RequestMethod.GET)
+	String youtubeLinks() {
+		Document doc = null;
+		Elements links = null;
+		String title = null;
+        try {
+
+            // need http protocol
+            doc = Jsoup.connect("http://youtube.com").get();
+
+            // get page title
+            title = doc.title();
+
+            // get all links
+            links = doc.select(".yt-ui-ellipsis");
+            
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+       
+        return (title + links.toString());
 	}
 
 }
