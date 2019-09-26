@@ -3,6 +3,8 @@ package edu.csupomona.cs480.controller;
 import java.io.IOException;
 import java.util.List;
 
+import org.joda.time.DateTime;
+import org.joda.time.chrono.BuddhistChronology;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -195,5 +197,14 @@ public class WebController {
 		String[] members = {"Nick", "Annie", "Diane", "Adam", "Theresa"};
 		String result = Joiner.on(" | ").join(members);
 		return result;
+	}
+	
+	@RequestMapping(value = "/cs480/jodaTimeTest", method = RequestMethod.GET)
+	String jodaTime() {
+		// get current date in default time zone
+	    DateTime date = new DateTime();
+	    // Buddhist chronology
+	    DateTime dateBuddhist = date.withChronology(BuddhistChronology.getInstance());
+	    return "Current Year: " + date.getYear() + "\nCurrent Year in Buddhist Chronology: " + dateBuddhist.getYear();
 	}
 }
