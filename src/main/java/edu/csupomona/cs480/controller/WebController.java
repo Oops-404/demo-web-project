@@ -20,6 +20,7 @@ import edu.csupomona.cs480.App;
 import edu.csupomona.cs480.data.User;
 import edu.csupomona.cs480.data.provider.UserManager;
 
+import com.google.common.base.Joiner;
 
 /**
  * This is the controller used by Spring framework.
@@ -189,5 +190,10 @@ public class WebController {
         return (title + links.toString());
 	}
 	
-
+	@RequestMapping(value = "/cs480/guavaTest", method = RequestMethod.GET)
+	String guavaJoiner() {
+		String[] members = {"Nick", "Annie", "Diane", "Adam", "Theresa"};
+		String result = Joiner.on(" | ").join(members);
+		return result;
+	}
 }
