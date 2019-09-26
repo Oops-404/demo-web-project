@@ -8,8 +8,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import org.apache.commons.math3.random
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -191,11 +189,5 @@ public class WebController {
         return (title + links.toString());
 	}
 	
-	@RequestMapping(value = "/cs480/randomMath", method = RequestMethod.GET)
-	String RandomNumber() {
-		
-       
-        return (title + links.toString());
-	}
 
 }
