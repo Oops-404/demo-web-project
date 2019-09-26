@@ -13,7 +13,13 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-
+	<parent>
+		<groupId>de.unkrig.commons</groupId>
+		<artifactId>commons-parent</artifactId>
+		<version>1.2.13</version>
+		<relativePath>../commons-parent</relativePath>
+	</parent>
+	<url>http://commons.unkrig.de/commons-math</url>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -61,6 +67,16 @@
   				<groupId>org.jsoup</groupId>
  			    <artifactId>jsoup</artifactId>
  			 <version>1.12.1</version>
+		</dependency>
+		<dependency>
+			<groupId>de.unkrig.commons</groupId>
+			<artifactId>commons-nullanalysis</artifactId>
+			<version>1.2.13</version>
+		</dependency>
+		<dependency>
+			<groupId>de.unkrig.commons</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>1.2.13</version>
 		</dependency>
 
 	</dependencies>
