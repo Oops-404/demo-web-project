@@ -13,7 +13,6 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -60,6 +59,14 @@
 			<artifactId>guava</artifactId>
 			<version>28.1-jre</version>
 		</dependency>
+        
+        <dependency>
+  			<!-- jsoup HTML parser library @ https://jsoup.org/ -->
+  				<groupId>org.jsoup</groupId>
+ 			    <artifactId>jsoup</artifactId>
+ 			 <version>1.12.1</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
