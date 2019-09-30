@@ -24,6 +24,9 @@ import edu.csupomona.cs480.data.provider.UserManager;
 
 import com.google.common.base.Joiner;
 
+import org.apache.commons.math3.random;
+import org.apache.commons.rng.UniformRandomProvider;
+import org.apache.commons.rng.RandomSource;
 /**
  * This is the controller used by Spring framework.
  * <p>
@@ -207,4 +210,12 @@ public class WebController {
 	    DateTime dateBuddhist = date.withChronology(BuddhistChronology.getInstance());
 	    return "Current Year: " + date.getYear() + "\nCurrent Year in Buddhist Chronology: " + dateBuddhist.getYear();
 	}
+	@RequestMapping(value = "/cs480/commonsMath", method = RequestMethod.GET)
+	String mathTime(){
+		long seed = 17399225432L; // Fixed seed means same results every time 
+		UniformRandomProvider rg = RandomSource.create(RandomSource.MT, seed);
+		
+		return "Here is your random number: " + seed
+	}
+	
 }
